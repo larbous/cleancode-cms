@@ -13,4 +13,4 @@ comming soon.....
 
 CleanCode Studion CMS Team
 
-- [Jan Lueders](http://janlueders.bugs3.com) - Lead Developer
+- [Jan Lüders](http://janlueders.bugs3.com) - Lead Developer
