@@ -1,0 +1,30 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+$lang['teamspeakviever_manage']			= 'Manage TeamspeakViever';
+$lang['teamspeakviever_edit']				= 'Edit';
+$lang['teamspeakviever_true']				= 'True';
+$lang['teamspeakviever_false']				= 'False';
+$lang['teamspeakviever_create']			= 'Create';
+$lang['teamspeakviever_list']				= 'List';
+$lang['teamspeakviever_new']				= 'New';
+$lang['teamspeakviever_edit_text']			= 'Edit this to suit your needs';
+$lang['teamspeakviever_no_records']			= 'There aren\'t any teamspeakviever in the system.';
+$lang['teamspeakviever_create_new']			= 'Create a new TeamspeakViever.';
+$lang['teamspeakviever_create_success']			= 'TeamspeakViever successfully created.';
+$lang['teamspeakviever_create_failure']			= 'There was a problem creating the teamspeakviever: ';
+$lang['teamspeakviever_create_new_button']			= 'Create New TeamspeakViever';
+$lang['teamspeakviever_invalid_id']			= 'Invalid TeamspeakViever ID.';
+$lang['teamspeakviever_edit_success']			= 'TeamspeakViever successfully saved.';
+$lang['teamspeakviever_edit_failure']			= 'There was a problem saving the teamspeakviever: ';
+$lang['teamspeakviever_delete_success']			= 'record(s) successfully deleted.';
+$lang['teamspeakviever_delete_failure']			= 'We could not delete the record: ';
+$lang['teamspeakviever_delete_error']			= 'You have not selected any records to delete.';
+$lang['teamspeakviever_actions']			= 'Actions';
+$lang['teamspeakviever_cancel']			= 'Cancel';
+$lang['teamspeakviever_delete_record']			= 'Delete this TeamspeakViever';
+$lang['teamspeakviever_delete_confirm']			= 'Are you sure you want to delete this teamspeakviever?';
+$lang['teamspeakviever_edit_heading']			= 'Edit TeamspeakViever';
+
+// Activities
+$lang['teamspeakviever_act_create_record']			= 'Created record with ID';
+$lang['teamspeakviever_act_edit_record']			= 'Updated record with ID';
+$lang['teamspeakviever_act_delete_record']			= 'Deleted record with ID';
