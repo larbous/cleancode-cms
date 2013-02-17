@@ -20,7 +20,7 @@ $config['modules_locations'] = array(
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/cleancode_customer_cms/';
+$config['base_url']	= 'http://localhost/cleancode-cms/';
 
 /*
 |--------------------------------------------------------------------------
