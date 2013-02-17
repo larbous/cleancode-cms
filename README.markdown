@@ -1,4 +1,6 @@
-# CleanCode Studio CMS
+# #CleanCode Studio CMS
+
+based on CodeIgniter & Bonfire 0.6
 
 ## Current Features
 
