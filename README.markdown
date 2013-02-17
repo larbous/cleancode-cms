@@ -13,6 +13,6 @@ comming soon.....
 
 ## The Team
 
-CleanCode Studion CMS Team
+#CleanCode Studion CMS Team
 
 - [Jan Lüders](http://janlueders.bugs3.com) - Lead Developer
