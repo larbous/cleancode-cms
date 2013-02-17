@@ -17,12 +17,13 @@ class Migration_Feature_updates extends Migration {
             // give current role (or administrators if fresh install) full right to manage permissions
             $this->db->query("INSERT INTO {$prefix}role_permissions VALUES(1,".$this->db->insert_id().")");
         }
-		$default_settings = "
+        
+        //Removed because allready exists
+		/*$default_settings = "
 			INSERT INTO `{$prefix}settings` (`name`, `module`, `value`) VALUES
-			 ('comments.moderator_level', 'comments', '1'),
 			 ('comments.require_approval', 'comments', '0');
 		";
-        $this->db->query($default_settings);
+        $this->db->query($default_settings);*/
 
         $this->dbforge->add_column('comments_threads', array(
                 'module'	=> array(
