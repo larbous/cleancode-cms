@@ -5,7 +5,7 @@
 		
 				<h2><?php echo (isset($inbox)) ? lang('inbox') : lang('outbox'); ?></h2>
 				
-				<?php echo form_open(site_url('messages/delete')); ?>
+				<?php echo form_open(current_url()); ?>
 				<?php if (isset($records) && is_array($records) && count($records)) : ?>
 					<table>
 						<thead>
@@ -39,7 +39,8 @@
 					<?php echo lang('messages_no_records'); ?>
 				<?php endif; ?>
 				
-				<input type="submit" name="delete_checked" value="<?php echo lang('delete'); ?>" class="button">
+				<p>	<input type="submit" name="create_checked" value="<?php echo lang('create'); ?>" class="btn btn-success">
+					<input type="submit" name="delete_checked" value="<?php echo lang('delete'); ?>" class="btn btn-danger"></p>
 				<?php echo form_close(); ?>
 				
 		</div>	<!-- /ajax-content -->

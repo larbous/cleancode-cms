@@ -1,0 +1,30 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+$lang['anti_bot_manage']			= 'Manage Anti-Bot';
+$lang['anti_bot_edit']				= 'Edit';
+$lang['anti_bot_true']				= 'True';
+$lang['anti_bot_false']				= 'False';
+$lang['anti_bot_create']			= 'Create';
+$lang['anti_bot_list']				= 'List';
+$lang['anti_bot_new']				= 'New';
+$lang['anti_bot_edit_text']			= 'Edit this to suit your needs';
+$lang['anti_bot_no_records']			= 'There aren\'t any anti_bot in the system.';
+$lang['anti_bot_create_new']			= 'Create a new Anti-Bot.';
+$lang['anti_bot_create_success']			= 'Anti-Bot successfully created.';
+$lang['anti_bot_create_failure']			= 'There was a problem creating the anti_bot: ';
+$lang['anti_bot_create_new_button']			= 'Create New Anti-Bot';
+$lang['anti_bot_invalid_id']			= 'Invalid Anti-Bot ID.';
+$lang['anti_bot_edit_success']			= 'Anti-Bot successfully saved.';
+$lang['anti_bot_edit_failure']			= 'There was a problem saving the anti_bot: ';
+$lang['anti_bot_delete_success']			= 'record(s) successfully deleted.';
+$lang['anti_bot_delete_failure']			= 'We could not delete the record: ';
+$lang['anti_bot_delete_error']			= 'You have not selected any records to delete.';
+$lang['anti_bot_actions']			= 'Actions';
+$lang['anti_bot_cancel']			= 'Cancel';
+$lang['anti_bot_delete_record']			= 'Delete this Anti-Bot';
+$lang['anti_bot_delete_confirm']			= 'Are you sure you want to delete this anti_bot?';
+$lang['anti_bot_edit_heading']			= 'Edit Anti-Bot';
+
+// Activities
+$lang['anti_bot_act_create_record']			= 'Created record with ID';
+$lang['anti_bot_act_edit_record']			= 'Updated record with ID';
+$lang['anti_bot_act_delete_record']			= 'Deleted record with ID';

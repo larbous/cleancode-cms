@@ -19,6 +19,34 @@ class Messages extends Front_controller {
 	 */
 	function index()
 	{
+		// Do we have any actions?
+		if ($action = $this->input->post('submit'))
+		{
+			$checked = $this->input->post('checked');
+		
+			switch(strtolower($action))
+			{
+				case 'create':
+					$this->change_status($checked, 3);
+					break;
+				case 'review':
+					$this->change_status($checked, 2);
+					break;
+				case 'archive':
+					$this->change_status($checked, 4);
+					break;
+				case 'reject':
+					$this->change_status($checked, 5);
+					break;
+				case 'edit':
+					$this->edit();
+					break;
+				case 'delete':
+					$this->delete($checked);
+					break;
+			}
+		}
+		
 		Template::set('records', $this->messages_model->find_all_inbox_with_username());
 		Template::set('inbox', 1);
 		Template::set_view('messages');
@@ -60,7 +88,7 @@ class Messages extends Front_controller {
 			redirect('messages');
 		}
 		
-		if ($this->input->post('submit'))
+		if ($this->input->post('submit') != "Create")
 		{
 			if ($this->save_messages($id, $mid))
 			{
@@ -74,7 +102,7 @@ class Messages extends Front_controller {
 		}
 	
 		if($mid != 0) Template::set('message', $this->messages_model->find($mid));
-		Template::set('toolbar_title', lang("messages_create_new_button"));
+		Template::set('toolbar_title', "messages_create_new_button");
 		Template::set_view('messages/create');
 		Template::render();
 	}

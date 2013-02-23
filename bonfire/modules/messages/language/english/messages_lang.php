@@ -11,6 +11,7 @@ $lang['date']						= 'Date';
 
 $lang['delete']						= 'Delete';
 $lang['reply']						= 'Reply';
+$lang['create']						= 'Create';
 
 $lang['messages_create_success']	= 'message successfully sended.';
 $lang['messages_create_failure']	= 'There was a problem sending the message: ';

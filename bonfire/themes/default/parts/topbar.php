@@ -37,6 +37,7 @@
 								<?php echo anchor(SITE_AREA, 'Control Panel'); ?>
 							</li>
 
+							
 							<?php endif; ?>
 							<li class="divider"></li>
 							<li>
@@ -44,7 +45,15 @@
 									<?php echo lang('bf_user_settings') ?>
 								</a>
 							</li>
-
+							
+							<?php if (has_permission('Site.Content.View')) : ?>
+							<li>
+								<a href="<?php echo site_url('messages');?>">
+									Messages
+								</a>
+							</li>
+							<?php endif; ?>
+							
 							<li class="divider"></li>
 							<li>
 								<a href="<?php echo site_url('logout');?>">
@@ -56,11 +65,14 @@
 
 					<?php else :  ?>
 
+						<?php if ($this->settings_lib->item('auth.allow_register') == 1): ?>
 						<li>
 							<a href="<?php echo site_url('register');?>">
 								<?php echo lang('bf_action_register') ?>
 							</a>
 						</li>
+						<?php endif; ?>
+						
 						<li>
 							<a href="<?php echo site_url('login');?>" class="login-btn">
 								<?php echo lang('bf_action_login') ?>
