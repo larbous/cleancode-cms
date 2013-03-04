@@ -672,6 +672,7 @@ class CI_Loader {
 		return $include_base === TRUE ? $this->_ci_library_paths : $this->_ci_model_paths;
 	}
 
+	
 	// --------------------------------------------------------------------
 
 	/**

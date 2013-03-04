@@ -8,18 +8,6 @@ class Migration_Install_blog_permissions extends Migration {
 		array('name' => 'Blog.Content.Create', 'description' => '', 'status' => 'active',),
 		array('name' => 'Blog.Content.Edit', 'description' => '', 'status' => 'active',),
 		array('name' => 'Blog.Content.Delete', 'description' => '', 'status' => 'active',),
-		array('name' => 'Blog.Reports.View', 'description' => '', 'status' => 'active',),
-		array('name' => 'Blog.Reports.Create', 'description' => '', 'status' => 'active',),
-		array('name' => 'Blog.Reports.Edit', 'description' => '', 'status' => 'active',),
-		array('name' => 'Blog.Reports.Delete', 'description' => '', 'status' => 'active',),
-		array('name' => 'Blog.Settings.View', 'description' => '', 'status' => 'active',),
-		array('name' => 'Blog.Settings.Create', 'description' => '', 'status' => 'active',),
-		array('name' => 'Blog.Settings.Edit', 'description' => '', 'status' => 'active',),
-		array('name' => 'Blog.Settings.Delete', 'description' => '', 'status' => 'active',),
-		array('name' => 'Blog.Developer.View', 'description' => '', 'status' => 'active',),
-		array('name' => 'Blog.Developer.Create', 'description' => '', 'status' => 'active',),
-		array('name' => 'Blog.Developer.Edit', 'description' => '', 'status' => 'active',),
-		array('name' => 'Blog.Developer.Delete', 'description' => '', 'status' => 'active',),
 	);
 
 	//--------------------------------------------------------------------

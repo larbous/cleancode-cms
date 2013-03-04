@@ -10,10 +10,10 @@
 if( isset($blog) ) {
     $blog = (array)$blog;
 }
-$id = isset($blog['id']) ? $blog['id'] : '';
+$id = isset($blog['post_id']) ? $blog['post_id'] : '';
 ?>
 <div class="admin-box">
-    <h3>Blog</h3>
+    <h3>blog</h3>
 <?php echo form_open($this->uri->uri_string(), 'class="form-horizontal"'); ?>
     <fieldset>
         <div class="control-group <?php echo form_error('blog_title') ? 'error' : ''; ?>">
@@ -26,7 +26,7 @@ $id = isset($blog['id']) ? $blog['id'] : '';
 
         </div>
         <div class="control-group <?php echo form_error('blog_slug') ? 'error' : ''; ?>">
-            <?php echo form_label('slug'. lang('bf_form_label_required'), 'blog_slug', array('class' => "control-label") ); ?>
+            <?php echo form_label('Slug'. lang('bf_form_label_required'), 'blog_slug', array('class' => "control-label") ); ?>
             <div class='controls'>
         <input id="blog_slug" type="text" name="blog_slug" maxlength="255" value="<?php echo set_value('blog_slug', isset($blog['blog_slug']) ? $blog['blog_slug'] : ''); ?>"  />
         <span class="help-inline"><?php echo form_error('blog_slug'); ?></span>
@@ -35,39 +35,19 @@ $id = isset($blog['id']) ? $blog['id'] : '';
 
         </div>
         <div class="control-group <?php echo form_error('blog_body') ? 'error' : ''; ?>">
-            <?php echo form_label('Blogtext'. lang('bf_form_label_required'), 'blog_body', array('class' => "control-label") ); ?>
+            <?php echo form_label('Text'. lang('bf_form_label_required'), 'blog_body', array('class' => "control-label") ); ?>
             <div class='controls'>
-        <textarea id="blog_body" class="input-xxlarge" rows="15" type="text" name="blog_body" >
-        <?php echo isset($post) ? $post->blog_body : set_value('blog_body') ?>
-        </textarea>
-        <span class="help-inline"><?php echo form_error('blog_body'); ?></span>
+            <?php echo form_textarea( array( 'name' => 'blog_body', 'id' => 'blog_body', 'rows' => '5', 'cols' => '80', 'value' => set_value('blog_body', isset($blog['blog_body']) ? $blog['blog_body'] : '') ) )?>
+            <span class="help-inline"><?php echo form_error('blog_body'); ?></span>
+        </div>
+
         </div>
 
 
-        </div>
-        <div class="control-group <?php echo form_error('blog_created_on') ? 'error' : ''; ?>">
-            <?php echo form_label('created_on'. lang('bf_form_label_required'), 'blog_created_on', array('class' => "control-label") ); ?>
-            <div class='controls'>
-        <input id="blog_created_on" type="text" name="blog_created_on"  value="<?php echo set_value('blog_created_on', isset($blog['blog_created_on']) ? $blog['blog_created_on'] : ''); ?>"  />
-        <span class="help-inline"><?php echo form_error('blog_created_on'); ?></span>
-        </div>
-
-
-        </div>
-        <div class="control-group <?php echo form_error('blog_modified_on') ? 'error' : ''; ?>">
-            <?php echo form_label('modified_on', 'blog_modified_on', array('class' => "control-label") ); ?>
-            <div class='controls'>
-        <input id="blog_modified_on" type="text" name="blog_modified_on"  value="<?php echo set_value('blog_modified_on', isset($blog['blog_modified_on']) ? $blog['blog_modified_on'] : ''); ?>"  />
-        <span class="help-inline"><?php echo form_error('blog_modified_on'); ?></span>
-        </div>
-
-
-        </div>
-        <input id="blog_deleted" type="hidden" name="blog_deleted" maxlength="0" value="0"  />
 
         <div class="form-actions">
             <br/>
-            <input type="submit" name="save" class="btn btn-primary" value="Create Blog" />
+            <input type="submit" name="save" class="btn btn-primary" value="Create blog" />
             or <?php echo anchor(SITE_AREA .'/content/blog', lang('blog_cancel'), 'class="btn btn-warning"'); ?>
             
         </div>

@@ -1,15 +1,14 @@
 <div>
-	<h1 class="page-header">Blog</h1>
+	<h2 class="page-header">Blog</h2>
 </div>
 
-<br />
-<?php if (isset($records) && is_array($records) && count($records)) : ?>
+<?php if (isset($posts) && is_array($posts) && count($posts)) :?>
  
-    <?php foreach ($records as $post) :?>
-    <div class="post">
+    <?php foreach ($posts as $post) :?>
+    <div class="news_body well well-large">
         <h2><?php e($post->blog_title) ?></h2>
  
-        <?php echo ($post->blog_body) ?>
+        <?php echo $post->blog_body ?>
     </div>
     <?php endforeach; ?>
  

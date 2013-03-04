@@ -4,8 +4,7 @@
 	        <?php if (ENVIRONMENT == 'development') :?>
 				<p style="float: right; margin-right: 80px;">Page rendered in {elapsed_time} seconds, using {memory_usage}.</p>
 			<?php endif; ?>
-	
-			<p>Powered Proudly by <a href="http://cibonfire.com" target="_blank">Bonfire <?php echo BONFIRE_VERSION ?></a> Modules developed by <a href="http://janlueders.bugs3.com/" target="_blank">Jan Lüders</a></p>
+			<p>Powered Proudly by <a href="http://cibonfire.com" target="_blank">Bonfire <?php echo BONFIRE_VERSION ?></a> Modules developed by <a href="http://janlueders.bugs3.com/" target="_blank">Jan Lüders</a> | <a href="<?php echo site_url("impressum"); ?>">Impressum</a></p>
 		</div>
 	</footer>
 	

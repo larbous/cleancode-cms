@@ -10,13 +10,11 @@ class content extends Admin_Controller {
 		parent::__construct();
 
 		$this->auth->restrict('Blog.Content.View');
-		$this->load->model('blog_model');
+		$this->load->model('blog_model', null, true);
 		$this->lang->load('blog');
 		
-			Assets::add_css('flick/jquery-ui-1.8.13.custom.css');
-			Assets::add_js('jquery-ui-1.8.13.min.js');
-			Assets::add_css('jquery-ui-timepicker.css');
-			Assets::add_js('jquery-ui-timepicker-addon.js');
+			Assets::add_js(Template::theme_url('js/editors/tiny_mce/tiny_mce.js'));
+			Assets::add_js(Template::theme_url('js/editors/tiny_mce/tiny_mce_init.js'));
 		Template::set_block('sub_nav', 'content/_sub_nav');
 	}
 
@@ -56,11 +54,10 @@ class content extends Admin_Controller {
 			}
 		}
 
-		//$records = $this->blog_model->find_all();
-		$records = $this->blog_model->where('blog_deleted', 0)->find_all();
-		
+		$records = $this->blog_model->find_all();
+
 		Template::set('records', $records);
-		Template::set('toolbar_title', 'Manage Blog');
+		Template::set('toolbar_title', 'Manage blog');
 		Template::render();
 	}
 
@@ -71,7 +68,7 @@ class content extends Admin_Controller {
 	/*
 		Method: create()
 
-		Creates a Blog object.
+		Creates a blog object.
 	*/
 	public function create()
 	{
@@ -94,7 +91,7 @@ class content extends Admin_Controller {
 		}
 		Assets::add_module_js('blog', 'blog.js');
 
-		Template::set('toolbar_title', lang('blog_create') . ' Blog');
+		Template::set('toolbar_title', lang('blog_create') . ' blog');
 		Template::render();
 	}
 
@@ -105,7 +102,7 @@ class content extends Admin_Controller {
 	/*
 		Method: edit()
 
-		Allows editing of Blog data.
+		Allows editing of blog data.
 	*/
 	public function edit()
 	{
@@ -153,7 +150,7 @@ class content extends Admin_Controller {
 		Template::set('blog', $this->blog_model->find($id));
 		Assets::add_module_js('blog', 'blog.js');
 
-		Template::set('toolbar_title', lang('blog_edit') . ' Blog');
+		Template::set('toolbar_title', lang('blog_edit') . ' blog');
 		Template::render();
 	}
 
@@ -180,16 +177,13 @@ class content extends Admin_Controller {
 	private function save_blog($type='insert', $id=0)
 	{
 		if ($type == 'update') {
-			$_POST['id'] = $id;
+			$_POST['post_id'] = $id;
 		}
 
 		
-		$this->form_validation->set_rules('blog_title','Title','required|trim|max_length[255]');
-		$this->form_validation->set_rules('blog_slug','slug','required|max_length[255]');
-		$this->form_validation->set_rules('blog_body','body','required');
-		$this->form_validation->set_rules('blog_created_on','created_on','required');
-		$this->form_validation->set_rules('blog_modified_on','modified_on','is_natural_no_zero');
-		$this->form_validation->set_rules('blog_deleted','deleted','0');
+		$this->form_validation->set_rules('blog_title','Title','required|max_length[255]');
+		$this->form_validation->set_rules('blog_slug','Slug','required|max_length[255]');
+		$this->form_validation->set_rules('blog_body','Text','required');
 
 		if ($this->form_validation->run() === FALSE)
 		{
@@ -202,9 +196,6 @@ class content extends Admin_Controller {
 		$data['blog_title']        = $this->input->post('blog_title');
 		$data['blog_slug']        = $this->input->post('blog_slug');
 		$data['blog_body']        = $this->input->post('blog_body');
-		$data['blog_created_on']        = $this->input->post('blog_created_on') ? $this->input->post('blog_created_on') : '0000-00-00 00:00:00';
-		$data['blog_modified_on']        = $this->input->post('blog_modified_on') ? $this->input->post('blog_modified_on') : '0000-00-00 00:00:00';
-		$data['blog_deleted']        = 0;
 
 		if ($type == 'insert')
 		{
