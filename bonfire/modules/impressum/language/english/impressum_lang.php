@@ -1,0 +1,30 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+$lang['impressum_manage']			= 'Manage Impressum';
+$lang['impressum_edit']				= 'Edit';
+$lang['impressum_true']				= 'True';
+$lang['impressum_false']				= 'False';
+$lang['impressum_create']			= 'Create';
+$lang['impressum_list']				= 'List';
+$lang['impressum_new']				= 'New';
+$lang['impressum_edit_text']			= 'Edit this to suit your needs';
+$lang['impressum_no_records']			= 'There aren\'t any impressum in the system.';
+$lang['impressum_create_new']			= 'Create a new Impressum.';
+$lang['impressum_create_success']			= 'Impressum successfully created.';
+$lang['impressum_create_failure']			= 'There was a problem creating the impressum: ';
+$lang['impressum_create_new_button']			= 'Create New Impressum';
+$lang['impressum_invalid_id']			= 'Invalid Impressum ID.';
+$lang['impressum_edit_success']			= 'Impressum successfully saved.';
+$lang['impressum_edit_failure']			= 'There was a problem saving the impressum: ';
+$lang['impressum_delete_success']			= 'record(s) successfully deleted.';
+$lang['impressum_delete_failure']			= 'We could not delete the record: ';
+$lang['impressum_delete_error']			= 'You have not selected any records to delete.';
+$lang['impressum_actions']			= 'Actions';
+$lang['impressum_cancel']			= 'Cancel';
+$lang['impressum_delete_record']			= 'Delete this Impressum';
+$lang['impressum_delete_confirm']			= 'Are you sure you want to delete this impressum?';
+$lang['impressum_edit_heading']			= 'Edit Impressum';
+
+// Activities
+$lang['impressum_act_create_record']			= 'Created record with ID';
+$lang['impressum_act_edit_record']			= 'Updated record with ID';
+$lang['impressum_act_delete_record']			= 'Deleted record with ID';
